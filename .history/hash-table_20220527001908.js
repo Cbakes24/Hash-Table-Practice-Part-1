@@ -38,7 +38,8 @@ class HashTable {
 
   // Add To Head Implementation
 
-  // Hash Table with collisions (pt. 4)
+  // insertWithNoHashCollisions(key, value) {}
+
   insertWithHashCollisions(key, value) {
     const index = this.hashMod(key);
     let newPair = new KeyValuePair(key, value);
@@ -51,7 +52,6 @@ class HashTable {
     this.count++;
   }
 
-  // Hash Table with no collisions (pt. 3)
   insert(key, value) {
     const newValInstance = new KeyValuePair(key, value);
     let index = this.hashMod(newValInstance.key);
