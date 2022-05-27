@@ -36,7 +36,7 @@ class HashTable {
     // return this.hash(key) % this.capacity;
   }
 
-  // Add To Head Implementation
+  // Add to Head Implemenation
 
   insertWithNoHashCollisions(key, value) {}
 
