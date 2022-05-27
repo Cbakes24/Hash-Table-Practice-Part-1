@@ -12,10 +12,13 @@ class KeyValuePair {
 class HashTable {
 
   constructor(numBuckets = 4) {
-    // fill this in
+    this.count = 0 //initializing the array where the array is implemented as a hash table
+    this.capacity = numBuckets // setting the size array
+    this.data = new Array(numBuckets).fill(null) //slots in the array are the 'buckets' and we've initialized each one to 'null'
+
   }
 
-  hash(key) {
+  hash(key) { //
     // fill this in
   }
 
