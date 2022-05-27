@@ -27,14 +27,7 @@ class HashTable {
     // return hashValue;
   }
 
-  hashMod(key) {
-    // accessing the index after hashing
-    return this.hash(key) % this.data.length;
-
-    // Option 2
-
-    // return this.hash(key) % this.capacity;
-  }
+  hashMod(key) {}
 
   insert(key, value) {
     // fill this in

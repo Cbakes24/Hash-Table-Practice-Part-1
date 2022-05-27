@@ -17,9 +17,10 @@ class HashTable {
   }
 
   hash(key) {
-    let hashValueSha = sha256(key).slice(0, 8);
-    return parseInt("0x" + hashValueSha);
     //
+    let hashValueSha = sha256(key).slice(0, 8);
+
+    return parseInt("0x" + hashValueSha);
     // let hashValue = 0;
     // for (let i = 0; i < key.length; i++) {
     // hashValue += key.charCodeAt(i);
@@ -28,12 +29,7 @@ class HashTable {
   }
 
   hashMod(key) {
-    // accessing the index after hashing
-    return this.hash(key) % this.data.length;
-
-    // Option 2
-
-    // return this.hash(key) % this.capacity;
+    // fill this in
   }
 
   insert(key, value) {
