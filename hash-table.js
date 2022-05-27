@@ -37,7 +37,25 @@ class HashTable {
   }
 
   insert(key, value) {
-    // fill this in
+    const newValInstance = new KeyValuePair(key, value)
+    let index = this.hashMod(newValInstance.key)
+    let dataBucket = this.data[index]
+
+    newValInstance.next = dataBucket
+    this.data[index] = newValInstance
+    this.count += 1
+
+    //ALT METHOD
+    // const hashMod = this.hashMod(key);
+    // let hash = new KeyValuePair(key, value);
+    // if (this.data[hashMod]) {
+    //   hash.next = this.data[hashMod];
+    //   this.count += 1;
+    //   this.data[hashMod] = hash;
+    // } else {
+    //   this.count += 1
+    //   this.data[hashMod] = hash
+    // }
   }
 }
 
